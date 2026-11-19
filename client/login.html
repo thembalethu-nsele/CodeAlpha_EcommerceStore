@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">MyStore</a>
+    <div id="nav-links"></div>
+  </nav>
+  <div class="container">
+    <h2>Create account</h2>
+    <p class="msg" id="msg"></p>
+    <input type="text" id="name" placeholder="Full name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password (min 6 characters)" />
+    <button onclick="register()">Register</button>
+    <p style="margin-top:14px">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>
