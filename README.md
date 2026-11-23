@@ -118,64 +118,8 @@ Server running on http://localhost:5000
 
 Then open http://localhost:5000 in your browser. Log in as admin@store.com / Admin123 to see the admin pages.
 
-Troubleshooting
-Problem	Fix
-bad auth : authentication failed	The username or password in MONGO_URI is wrong. Fix .env, then type rs in the terminal and press Enter.
-Could not connect to any servers	Add 0.0.0.0/0 in Atlas Network Access, and check that the cluster is not paused.
-Cannot find module	Run npm install in the project folder.
-EADDRINUSE	Port 5000 is already in use. Change PORT in .env, for example to 5001.
-"No products found"	Run node server/seed.js once.
-Project structure
-CodeAlpha_EcommerceStore/
-├── client/                 # Frontend
-│   ├── css/style.css
-│   ├── js/                 # auth, products, product, cart, orders, admin
-│   ├── images/             # Product photos
-│   ├── index.html          # Product list
-│   ├── product.html        # Product details
-│   ├── cart.html           # Cart and checkout
-│   ├── orders.html         # Order history
-│   ├── admin.html          # Admin dashboard
-│   ├── login.html
-│   └── register.html
-├── server/                 # Backend
-│   ├── config/db.js        # MongoDB connection
-│   ├── middleware/auth.js  # JWT protection and admin check
-│   ├── models/             # User, Product, Order
-│   ├── routes/             # auth, products, orders
-│   ├── seed.js             # Sample data
-│   ├── setImages.js        # Links product photos to products
-│   └── server.js
-├── docs/                   # UML diagrams and screenshots
-├── .env.example
-└── package.json
-API endpoints
-Method	Endpoint	Access	Description
-POST	/api/auth/register	Public	Create an account
-POST	/api/auth/login	Public	Log in and receive a token
-GET	/api/auth/me	Logged in	Get the current user
-GET	/api/products	Public	List products (?search= and ?category=)
-GET	/api/products/:id	Public	Get one product
-POST	/api/products	Admin	Add a product
-PUT	/api/products/:id	Admin	Edit a product
-DELETE	/api/products/:id	Admin	Delete a product
-POST	/api/orders	Logged in	Place an order
-GET	/api/orders/mine	Logged in	Get my orders
-GET	/api/orders	Admin	Get all orders
-PUT	/api/orders/:id/status	Admin	Update an order's status
-Documentation
-
-The use case diagram and class diagram are in the docs folder.
+The use case diagram and class diagram are in the  folder.
 
 The shopping cart is stored in the browser (localStorage) until checkout. Orders are saved in MongoDB, with the product name and price recorded at the time of purchase.
-
-Screenshots
-
-Add your screenshots to docs/screenshots and link them here:
-
-![Products](docs/screenshots/products.png)
-![Cart](docs/screenshots/cart.png)
-![Admin](docs/screenshots/admin.png)
-Author
 
 Thembalethu Nsele Built as part of the CodeAlpha Full Stack Development Internship.
