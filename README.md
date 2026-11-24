@@ -2,7 +2,7 @@ CodeAlpha_EcommerceStore
 
 A full-stack e-commerce web application built for the CodeAlpha Full Stack Development Internship (Task 1). Customers can browse products, add them to a cart, place orders and track their order history. An admin can manage products and update order statuses.
 
-Live demo: ![Uploading image.png…]()
+Live demo: 
 [https://codealpha-ecommercestore.onrender.com](https://codealpha-ecommercestore-35lm.onrender.com) (The site is on a free plan and goes to sleep when unused, so the first load can take about a minute.)
 
 Features
